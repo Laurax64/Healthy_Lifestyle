@@ -22,19 +22,19 @@ val DancingScript = FontFamily(
 val Typography = Typography(
     h1 = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 60.sp,
+        fontSize = 35.sp,
         fontFamily = DancingScript
     ),
     h2 = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 40.sp,
+        fontSize = 20.sp,
     ),
     h3 = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 30.sp
+        fontSize = 14.sp
     ),
     body1 = TextStyle(
         fontWeight = FontWeight.Normal,
-        fontSize = 30.sp
+        fontSize = 14.sp
 )
 )
