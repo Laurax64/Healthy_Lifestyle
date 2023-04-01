@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
@@ -14,12 +15,17 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.ContentAlpha.medium
 import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -66,35 +72,40 @@ fun HLApp() {
 private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
     var expanded by remember { mutableStateOf(false) }
     Card(
-        elevation = 4.dp,
+
         modifier = modifier.padding(8.dp).animateContentSize(
             animationSpec = spring(
                 dampingRatio = Spring.DampingRatioMediumBouncy,
                 stiffness = Spring.StiffnessLow
             )
         )
+            .fillMaxWidth()
     ) {
-        Surface(
-            border = BorderStroke(width = 2.dp, color = MaterialTheme.colors.onSurface))  {
-        Column(
-            modifier = modifier
-                .clickable(onClick = { expanded = !expanded })
-                .padding(8.dp)
-        ) {
-            Image(painter = painterResource(
-                    id = healthFactor.imageResourceId),
+        Column() {
+            Row(
+                modifier = modifier
+                    .clickable(onClick = { expanded = !expanded })
+                    .padding(8.dp)
+            ) {
+                Image(
+                    painter = painterResource(
+                        id = healthFactor.imageResourceId
+                    ),
                     contentDescription = null,
-
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.clip(CircleShape)
+                        .size(64.dp)
                 )
                 Text(
                     text = stringResource(healthFactor.titleResourceId),
                     style = MaterialTheme.typography.h2,
+                    modifier = modifier.padding(8.dp)
 
-                )
-            if(expanded) {
-                HealthFactorInfo(healthFactor.infoResourceId, healthFactor.sourceResourceId)
+                    )
             }
-        }
+            if (expanded) {
+                HealthFactorInfo(healthFactor.imageResourceId, healthFactor.infoResourceId, healthFactor.sourceResourceId)
+            }
         }
     }
 }
@@ -102,11 +113,21 @@ private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
 
 @Composable
 fun HealthFactorInfo(
+    @DrawableRes imageResourceId: Int,
     @StringRes infoResourceId: Int,
     @StringRes sourceResourceId: Int,
-    modifier: Modifier = Modifier
-) {
-    Column() {
+    modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(8.dp)
+    ) {
+        Image(
+            painter = painterResource(
+                id =imageResourceId
+            ),
+            contentDescription = null,
+            modifier = modifier.clip(RoundedCornerShape(16.dp))
+
+        )
     Text(
         text = stringResource(infoResourceId),
         style = MaterialTheme.typography.body1,

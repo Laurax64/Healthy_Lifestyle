@@ -20,7 +20,6 @@ val DancingScript = FontFamily(
 )
 // Set of Material typography styles to start with
 val Typography = Typography(
-    defaultFontFamily = Tinos,
     h1 = TextStyle(
         fontWeight = FontWeight.Bold,
         fontSize = 60.sp,
@@ -32,10 +31,10 @@ val Typography = Typography(
     ),
     h3 = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 34.sp
+        fontSize = 30.sp
     ),
     body1 = TextStyle(
         fontWeight = FontWeight.Normal,
-        fontSize = 34.sp
+        fontSize = 30.sp
 )
 )
