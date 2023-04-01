@@ -8,6 +8,7 @@ import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,6 +18,8 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,10 +44,11 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun HLApp() {
-    Scaffold(topBar = {HLTopBar()}) {
-        LazyColumn() {
-            items(healthFactors) {
-            HLCard(it)
+        Scaffold(topBar = { HLTopBar() }) {
+            LazyColumn() {
+                items(healthFactors) {
+                    HLCard(it)
+
             }
         }
     }
@@ -70,6 +74,8 @@ private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
             )
         )
     ) {
+        Surface(
+            border = BorderStroke(width = 2.dp, color = MaterialTheme.colors.onSurface))  {
         Column(
             modifier = modifier
                 .clickable(onClick = { expanded = !expanded })
@@ -88,6 +94,7 @@ private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
             if(expanded) {
                 HealthFactorInfo(healthFactor.infoResourceId, healthFactor.sourceResourceId)
             }
+        }
         }
     }
 }
