@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Healthy Lifestyle</string>
+
+    <string name="title1">Checkup</string>
+    <string name="title2">Diet</string>
+    <string name="title3">Exercise</string>
+    <string name="title4">Living Space</string>
+    <string name="title5">Nature</string>
+    <string name="title6">Sleep</string>
+    <string name="title7">Social</string>
+    <string name="title8">Stress</string>
+    <string name="title9">Sunshine</string>
+    <string name="title10">Toxins</string>
+    <string name="info1">
+        See a doctor regularly as a preventive measure
+        rather than reactively </string>
+    <string name="info2">
+        2-3 Meals within 6-8 hours per day
+        </string>
+    <string name="info3">
+        150-300 min vigorous physical activity or 300 – 600 moderate physical activity per week
+    </string>
+
+    <string name="info4">Having plants in the home leads to a reduction of indoor pollutants </string>
+    <string name="info5"></string>
+    <string name="info6"></string>
+    <string name="info7"></string>
+    <string name="info8"></string>
+    <string name="info9"></string>
+    <string name="info10"></string>
+    <string name="source1">https://pubmed.ncbi.nlm.nih.gov/30367329/</string>
+    <string name="source2">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520689/</string>
+    <string name="source3">https://pubmed.ncbi.nlm.nih.gov/35876019/</string>
+    <string name="source4">https://ntrs.nasa.gov/api/citations/19930073077/downloads/19930073077.pdf</string>
+    <string name="source5"></string>
+    <string name="source6"></string>
+    <string name="source7"></string>
+    <string name="source8"></string>
+    <string name="source9"></string>
+    <string name="source10"></string>
+
+</resources>
