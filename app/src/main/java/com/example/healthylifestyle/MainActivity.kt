@@ -63,7 +63,7 @@ fun HLApp() {
 
 /**
  * Composable that displays a list item containing a factor that affects health and information
- * including source about it
+ * about it
  *
  * @param healthFactor contains the data that populates the list item
  * @param modifier modifiers to set to this composable
@@ -100,11 +100,10 @@ private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
                     text = stringResource(healthFactor.titleResourceId),
                     style = MaterialTheme.typography.h2,
                     modifier = modifier.padding(8.dp)
-
                     )
             }
             if (expanded) {
-                HealthFactorInfo(healthFactor.imageResourceId, healthFactor.infoResourceId, healthFactor.sourceResourceId)
+                HealthFactorInfo(healthFactor.imageResourceId, healthFactor.infoResourceId)
             }
         }
     }
@@ -115,7 +114,6 @@ private fun HLCard(healthFactor: HealthFactor, modifier: Modifier = Modifier) {
 fun HealthFactorInfo(
     @DrawableRes imageResourceId: Int,
     @StringRes infoResourceId: Int,
-    @StringRes sourceResourceId: Int,
     modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.padding(8.dp)
@@ -151,6 +149,5 @@ fun HLTopBar() {
 fun DefaultPreview() {
     HealthyLifestyleTheme {
         HLApp()
-
     }
 }

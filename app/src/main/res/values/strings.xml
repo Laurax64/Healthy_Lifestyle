@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Healthy Lifestyle</string>
-
     <string name="title1">Checkup</string>
     <string name="title2">Diet</string>
     <string name="title3">Exercise</string>
@@ -21,22 +20,28 @@
         Do 150-300 min vigorous physical activity or 300 – 600 moderate physical activity per week.
     </string>
 
-    <string name="info4">Having plants in the home leads to a reduction of indoor pollutants. </string>
-    <string name="info5"></string>
-    <string name="info6"></string>
-    <string name="info7"></string>
-    <string name="info8"></string>
-    <string name="info9"></string>
-    <string name="info10"></string>
+    <string name="info4">Having plants in the home leads to a reduction of indoor pollutants.
+    </string>
+    <string name="info5">A minimum of 2 hours a week spent in nature,increases your health and well
+        being.</string>
+    <string name="info6">Avoid large meals, caffeine, and alcohol before bedtime.</string>
+    <string name="info7">A robust sense of well-being requires six hours a day of social
+        interaction.</string>
+    <string name="info8">Try muscle relaxation, breathing or meditation exercises, prayer, yoga, or
+        swimming to reduce stress.</string>
+    <string name="info9">Get between 10 and 30 minutes of sun exposure a few times a week.</string>
+    <string name="info10">Drink from glass bottles instead of plastic bottles to avoid toxic
+        chemicals.</string>
+    <!-- TODO add the rest of the sources and add the source to each card and make it clickable. -->
     <string name="source1">https://pubmed.ncbi.nlm.nih.gov/30367329/</string>
     <string name="source2">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520689/</string>
     <string name="source3">https://pubmed.ncbi.nlm.nih.gov/35876019/</string>
-    <string name="source4">https://ntrs.nasa.gov/api/citations/19930073077/downloads/19930073077.pdf</string>
+    <string name="source4">https://ntrs.nasa.gov/api/citations/19930073077/downloads/19930073077.pdf
+    </string>
     <string name="source5"></string>
     <string name="source6"></string>
     <string name="source7"></string>
     <string name="source8"></string>
     <string name="source9"></string>
     <string name="source10"></string>
-
 </resources>
