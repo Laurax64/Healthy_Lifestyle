@@ -11,5 +11,6 @@ Healthy Lifestyle is an App that shows tips related to health in a scrollable li
 Light theme and dark theme
 
 
+This is my implementation of https://developer.android.com/codelabs/basic-android-kotlin-compose-30-days.
 
 
