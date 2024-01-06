@@ -8,17 +8,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.healthylifestyle.R
 
-
-val Tinos = FontFamily(
-    Font(R.font.tinos_regular),
-    Font(R.font.tinos_bold, FontWeight.Bold)
-)
-
 val DancingScript = FontFamily(
     Font(R.font.dancing_script_regular),
     Font(R.font.dancing_script_bold, FontWeight.Bold)
 )
-// Set of Material typography styles to start with
+
 val Typography = Typography(
     h1 = TextStyle(
         fontWeight = FontWeight.Bold,
