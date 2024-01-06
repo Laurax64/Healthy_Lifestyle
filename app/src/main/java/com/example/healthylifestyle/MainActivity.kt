@@ -137,8 +137,7 @@ fun HealthFactorInfo(
 fun HLTopBar() {
     Text(
         text = stringResource(R.string.app_name),
-        textAlign = TextAlign.Center,
-        style = MaterialTheme.typography.h1,
+        style = MaterialTheme.typography.h1
     )
 }
 
