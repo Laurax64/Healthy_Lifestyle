@@ -1,7 +1,5 @@
-# Healthy Lifestyle 
-Healthy Lifestyle is an App that shows tips related to health in a scrollable list.
-
-
+# Healthy Lifestyle App
+To practice the concepts I learned in unit 3 of [Android Basics with Compose](https://developer.android.com/courses/android-basics-compose/course), including material design, animations, and accessibility best practices I build this android app that can display multiple similar items in a scrollable list.
 
 
 
@@ -11,6 +9,5 @@ Healthy Lifestyle is an App that shows tips related to health in a scrollable li
 Light theme and dark theme
 
 
-This is my implementation of https://developer.android.com/codelabs/basic-android-kotlin-compose-30-days.
 
 
